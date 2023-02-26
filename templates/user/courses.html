@@ -1,0 +1,58 @@
+{% extends 'base.html'%}
+
+{% block a %}
+<div class="text-center fs-2"> OUR <b class="text-mycolor">COURSES
+    <i class="fa-solid fa-book"></i></b></div>
+<div class="row">
+    <div class="col-sm-5 mx-auto">
+          <form method="get">
+        <div class="input-group">
+
+            <input name="search" placeholder="Search.." type="text" class="form-control"/>
+            <span class="input-group-text bg-mycolor">
+     <input type="submit" class="btn btn bg-mycolor" value="Search">
+            </span>
+        </div>
+
+    </form>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="row">
+
+        <table class="table table-hover">
+            <tr>
+                <th>Picture</th>
+                <th>Course Name</th>
+                <th>Branch</th>
+                <th>Duration</th>
+                <th>Seats</th>
+                <th>Hod</th>
+                <th>Hod Picture</th>
+                <th>Stablised Date</th>
+                <th>Fee</th>
+                <th>Eligibility</th>
+            </tr>
+            {% for a in cdata %}
+            <tr>
+                <td><img src="/{{a.cpic}}" class="img-thumbnail" style="max-height:130px;"/></td>
+                <td>{{a.cname}}</td>
+                <td>{{a.branch}}</td>
+                <td>{{a.duration}}</td>
+                <td>{{a.seats}}</td>
+                <td>{{a.hod}}</td>
+                <td><img src="/{{a.hodpic}}" class="img-thumbnail" style="max-height:70px;"/></td>
+                <td>{{a.sdate}}</td>
+                <td>{{a.fee}}</td>
+                <td>{{a.eligibilty}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+            </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+{% endblock %}

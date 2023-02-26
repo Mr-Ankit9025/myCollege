@@ -1,0 +1,56 @@
+{% extends 'base.html'%}
+
+{% block a%}
+<div class="text-center fw-bold  fs-2">Regist<b class="text text-mycolor">er...</b> <i class="fa-solid fa-key"></i></div>
+</b></div>
+
+<div class="row">
+    <div class="col-sm-3 bg-l"></div>
+    <div class="col-sm-6" style="min-height:300px;background:linear-gradient(black,white);box-shadow:rgb(38,57,77)0px 20px 30px -10px;)">
+        {% if status %}
+
+        {% endif %}
+        <form method="post" enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+     <div class="input-group flex-nowrap m-2">
+  <input required type="text" name="name" class="form-control me-2" placeholder="Name" aria-label="Username" aria-describedby="addon-wrapping">
+  <input required type="text" name="rno" class="form-control" placeholder="Roll No" aria-label="Username" aria-describedby="addon-wrapping">
+</div>
+        <div class="input-group flex-nowrap m-2">
+            <select class="form-control"name="course" required>
+                <option>Select Courses</option>
+                <option>Computer Science</option>
+                <option>IT</option>
+                <option>B-tech</option>
+                <option>BCA</option>
+                <option>MCA</option>
+</select>
+</div>
+        <div class="input-group flex-nowrap m-2">
+  <input required type="number"name="year" class="form-control" placeholder="Year" aria-label="Username" aria-describedby="addon-wrapping">
+</div>
+         <div class="input-group flex-nowrap m-2">
+  <input required type="date"name="rdate" class="form-control" placeholder="Registration Date" aria-label="Username" aria-describedby="addon-wrapping">
+</div>
+         <div class="input-group flex-nowrap m-2">
+  <input required type="Email"name="email" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="addon-wrapping">
+</div>
+<div class="input-group flex-nowrap m-2">
+  <input required type="number"name="mob"  class="form-control" placeholder="Contact No : +91" aria-label="Username" aria-describedby="addon-wrapping">
+</div>
+ <div class="input-group flex-nowrap m-2">
+  <input required type="number"name="gmob" class="form-control" placeholder="Guardian Contact No : +91" aria-label="Username" aria-describedby="addon-wrapping">
+</div>
+         <div class="input-group flex-nowrap m-2">
+  <input required type="file"name="propic" class="form-control" placeholder="Profile Picture" aria-label="Username" aria-describedby="addon-wrapping">
+</div>
+         <div class="input-group flex-nowrap m-2">
+  <input type="submit" class="form-control bg-black text-light" value="Register Now">
+</div>
+        </form>
+    </div>
+    <div class="col-sm-3 bg-l"></div>
+</div>
+{% endblock %}

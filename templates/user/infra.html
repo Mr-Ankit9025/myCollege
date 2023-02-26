@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block a %}
+<div class="text-center fw-bold  fs-2">Infrastruct<b class="text text-mycolor">ur</b> <i class="fa-solid fa-id-card-clip"></i></div>
+<div class="row">
+    <div class="col-sm-12 bg-l p-5">
+<div class="row">
+    {% for i in idata %}
+ <div class="col-sm-3">
+
+  <div class="card" style="width: 18rem;">
+  <img src="/{{i.ipic}}"style="max-heigth:100px" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{i.iname}}</h5>
+  </div>
+</div>
+ </div>
+{% endfor %}
+</div>
+</div>
+</div>
+
+
+
+{%  endblock  %}

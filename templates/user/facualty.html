@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block a %}
+<div class="text-center fw-bold  fs-2">Facul<b class="text text-mycolor">ty</b> <i class="fa-solid fa-id-card-clip"></i></div>
+<div class="row">
+    <div class="col-sm-12 bg-l">
+<div class="row">
+    {% for f in fdata %}
+ <div class="col-sm-3 p-5">
+  <div class="card" style="width: 18rem;">
+  <img src="/{{f.tpic}}"style="max-height:270px;" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Faculty Name :{{f.tname}}</h5>
+    <h5 class="card-title fs-5">Trade :{{f.tbranch}}</h5>
+  </div>
+</div>
+ </div>
+{% endfor %}
+</div>
+</div>
+</div>
+
+
+
+{%  endblock  %}

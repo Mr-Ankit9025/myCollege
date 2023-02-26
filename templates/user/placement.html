@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block a %}
+<div class="text-center fs-2" xmlns="http://www.w3.org/1999/html"> Our  <b class="text-mycolor"> Placements
+   <i class="fa-solid fa-image"></i></b></div>
+
+<div class="row">
+    <div class="col-sm-5 mx-auto">
+          <form method="get">
+        <div class="input-group">
+
+            <input name="search" placeholder="Search.." type="text" class="form-control"/>
+            <span class="input-group-text bg-mycolor">
+     <input type="submit" class="btn btn bg-mycolor" value="Search">
+            </span>
+        </div>
+
+    </form>
+</div>
+</div>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="row">
+            <!-- start placement -->
+            {% for x in pdata%}
+            <div class="col-sm-3 my-2">
+                <div class="card">
+<img src="/{{x.stupic}}" style="max-height:200px;" class="img-cart-top">
+        <div class="card-body">
+            <h3 class="card-title">{{x.cname}}</h3>
+             <img src="/{{x.cpic}}"
+                  style="max-height:40px" class="img-thumbnail float-end">
+            <b>Name :</b>{{x.name}}</br>
+            <b>Branch :</b>{{x.branch}}</br>
+            <b>Session :</b>{{x.syear}}</br>
+            <b>City :</b>{{x.pcity}}</br>
+            <b>Course :</b>{{x.course}}</br>
+            <b>Designation :</b>{{x.designation}}</br>
+               </div>
+                </div>
+                </div>
+            <!-- end placement -->
+            {% endfor %}
+</div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+{%  endblock  %}

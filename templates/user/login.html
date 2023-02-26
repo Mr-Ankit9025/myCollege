@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block a %}
+<div class="text-center fw-bold  fs-2">Log<b class="text text-mycolor">in</b> <i class="fa-solid fa-key"></i></div>
+<div class="row">
+<div class="col-sm-12 bg-l"style="min-height:350px;">
+    <div class="row">
+        <div class="col-sm-4  lmar"style="min-height:270px;border-radius:5px;">
+            <div class="row m-2 p-4">
+            <div class="input-group mb-3">
+             <input type="Email" placeholder="Username.." class="form-control">
+            </div>
+             <div class="input-group mb-3">
+             <input type="password" placeholder="Password.." class="form-control">
+            </div>
+                <div class="input-group mb-3">
+              <input type="submit"value="Login"class="form-control fw-bold"style="background:linear-gradient( 20deg,white,lightgreen); border:none;;">
+              </div>
+                <div class="input-group">
+                    <a href="#"style="text-decoration:none;">forget Password</a>
+                </div>
+        </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+</div>
+{% endblock %}

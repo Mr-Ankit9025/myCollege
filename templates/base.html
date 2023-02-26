@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Collage</title>
+    <link href="{% static 'css/bootstrap.css'%}" rel="stylesheet"/>
+    <link href="{% static 'css/all.css'%}" rel="stylesheet">
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <style>
+    .bg-mycolor{
+    background:lightgreen;
+    }
+    .text-mycolor{
+    color:lightgreen;
+    }
+    .s{
+    border:2px solid lightgreen;
+
+    border-radius:2px;
+    }
+    .s:hover
+    {
+    background:lightgreen;
+    transform:rotate(360deg);
+    transition:all ease 1s;
+    color:white
+    }
+    .social{
+    padding:1%;
+    }
+    .menu ul li a:hover
+    {
+   color:red;
+   transition:all ease 1s;
+    }
+    .bg-l{
+    background:linear-gradient(100deg,white,lightgreen,white);
+    }
+    .lmar{
+    margin:60px auto;
+    background:lightgreen;
+    background:rgba(0,0,0,.5);
+    box-shadow:rgb(38,57,77)0px 20px 30px -10px;
+    }
+    .reg{
+    margin:60px auto;
+    }
+    .reg1{
+    margin:30px auto;
+    padding:20px;
+    background:rgba(0,0,0,.2);
+    box-shadow:rgb(38,57,77)0px 20px 30px -10px;
+
+    }
+    .img{
+
+    background:linear-gradient(white,lightgreen);
+
+    }
+    .footer{
+      background-image: url("{% static 'images/img1.jpeg' %}");
+      background-repeat: no-repeat;
+      background-size: cover;
+    
+    }
+    #blur{
+      padding: 10px;
+      box-sizing: border-box;
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.6);
+    }
+    .link a{
+      text-decoration: none;
+      font-size: 20px;
+      color:white;
+    }
+</style>
+</head>
+<body>
+<div class="row top bg-mycolor"style="min-height:5px;"></div>
+<div class="row header text-center">
+    <div class="col-sm-2 logo fs-3 "><sub class="fw-bold">MY</sub><b class="text-mycolor">COLLAGE</b><sup class="fs-4"> <i class="fa-solid fa-graduation-cap"></i></sup></div>
+
+    <div class="col-sm-9 menu">
+    <!--start menu-->
+<nav class="navbar navbar-expand-lg "id="menu">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/user/home/"><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user/aboutus/"><i class="fa-solid fa-address-card"></i> About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user/courses/"><i class="fa-solid fa-book"></i> Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user/register/"><i class="fa-solid fa-registered"></i> Register</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="/user/contactus"><i class="fa-solid fa-square-phone"></i> Contactus</a>
+           </li>
+
+           <li class="nav-item">
+          <a class="nav-link" href="/user/gallery/"><i class="fa-solid fa-image"></i> Gallery</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="/user/infra"><i class="fa-solid fa-folder-tree"></i> Infra</a>
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link" href="/user/facualty"><i class="fa-solid fa-folder-tree"></i>Faculty</a>
+        </li>
+
+           <li class="nav-item">
+          <a class="nav-link" href="/user/placement/"><i class="fa-solid fa-address-card"></i> Placement</a>
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link" href="/user/video/"><i class="fa-solid fa-video"></i> Video</a>
+        </li>
+
+           <li class="nav-item">
+          <a class="nav-link" href="/user/login/"><i class="fa-solid fa-key"></i> Login</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+     <!--end menu-->
+    </div>
+
+    <div class="col-sm-1 social">
+        <i class="fa-brands fa-facebook s"></i>
+        <i class="fa-brands fa-twitter s"></i>
+        <i class="fa-brands fa-youtube s"></i>
+    </div>
+</div>
+<div class="row bg-dark text-light text-center fw-bold">
+    <div class="col-sm-4"><i class="fa-solid fa-square-phone"></i> 7460055625 <i class="fa-brands fa-square-whatsapp"></i>  9598943294</div>
+    <div class="col-sm-4"><i class="fa-sharp fa-solid fa-school"></i>  AZAD POLYTECHNIC COLLAGE</div>
+    <div class="col-sm-4"><i class="fa-solid fa-envelope"></i> guptaajeet271@gmail.com </div>
+</div>
+
+
+
+    <!--end slider-->
+</div>
+<div class="row services"></div>
+<div class="row section1"></div>
+<div class="row section2"></div>
+<div class="content">
+    <div class="col-sm-12">
+{% block a %}
+
+
+{% endblock a %}
+    </div>
+    </div>
+    <div class="footer">
+      <div id="blur" class="row">
+      <div class="col-sm-4">
+        <img src="{% static '/images/aicte.png' %}"  height="150px" width="150px"  >
+  
+        <img src="{% static '/images/bteup.webp' %}" style=" border-radius:50%; float: right;" height="150px" width="150px" >
+        <br>
+        <img src="{% static '/images/playstore.png' %}"  height="200px" class="mb-3 mt-4 w-100" >
+        <br>
+      </div>
+      <div class="col-sm-4">
+        <p class="text-dark text-center fw-bold fs-1"><b class="bor">Important Links</b></p>
+        <p class="text-center fw-bold  link"><a href="#">AICTE Website</a></p>
+        <p class="text-center fw-bold  link"><a href="#">JEECUP Website</a></p>
+        <p class="text-center fw-bold  link"><a href="#">District Officail Website</a></p>
+        <p class="text-center fw-bold  link"><a href="#">Scholarship UP</a></p>
+        <p class="text-center fw-bold  link"><a href="#">Indian Gov Web Directory</a></p>
+        <p class="text-center fw-bold  link"><a href="#">Employment News</a></p>
+      </div>
+      <div class="col-sm-4">
+        <p class="text-light fs-3"><b class="bor1">Stay Connected</b> With <b class="text-info">Us</b></p>
+             
+        <p class="text-light fs-5">
+         <i class="fa-brands fa-facebook-f text-primary"></i> Facebook <br />
+         <i class="fa-brands fa-twitter text-info"></i> Twitter <br />
+          <i class="fa-brands fa-whatsapp text-success"></i> Whatsapp <br />
+          <i class="fa-brands fa-linkedin-in text-primary"></i> Linkdin <br />
+          <i class="fa-brands fa-instagram text-danger"></i> Instagram <br/>
+          <p class="text-dark text-center fw-bold fs-1"><b class="bor">Contact</b></p>
+          <i class="fa-solid fa-phone text-info"></i><b class="text-light"> 9415370426, 9936380916, 9450994420</b>
+          <br>
+          <i class="fa-solid fa-envelope text-info"></i><b class="text-light"> azadpoly1@gmail.com</b> <br>
+          <i class="fa-solid fa-location text-info"></i><b class="text-light"> Azad Polytechnic Bharthipur, Palhana, Azamgarh, U.P., India-276123</b>
+  
+        </p>
+      </div>
+    </div>
+    </div>
+
+
+
+<div class="row bfooter text-center  bg-dark text-white">
+    <div class="col-sm-6">
+        Developed By :<a href="#"class="text mycolor">Ajeet</a>
+    </div>
+    <div class="col-sm-6">
+        &nbsp;
+       Copy <a href="https://www.techpile.in">Techpile Technology Pvt. Ltd.</a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+
+{% load static %}
+{% block a %}
+<div class="text-center m-2 fs-2 fw-bold">Image <b class="text text-mycolor">Gallery</b>
+   <i class="fa-solid fa-image"></i></div>
+<div class="row">
+    <div class="col-sm-12 bg-l p-4">
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="row">
+            {% for x in data %}
+            <div class="col-sm-4">
+                <!--start card-->
+
+                <div class="card" style="width: 18rem;">
+  <img src="/{{x.picture}}" class="card-img-top" alt="...">
+  <div class="card-body text-center">
+    <h5 class="card-title text-center">{{x.gdes}}</h5>
+
+  </div>
+</div>
+
+
+                <!--end card-->
+
+
+            </div>
+    {% endfor %}
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+
+
+</div>
+</div>
+</div>
+
+{% endblock %}
